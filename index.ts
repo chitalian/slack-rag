@@ -18,11 +18,7 @@ async function listChannels() {
       console.log(`Channel ID: ${channel.id} - Name: ${channel.name}`);
     });
   } catch (error) {
-    if (error.data) {
-      console.error(`Error listing channels: ${error.data}`);
-    } else {
-      console.error(`Error listing channels: ${error}`);
-    }
+    console.log(error);
   }
 }
 
@@ -33,11 +29,7 @@ async function fetchMessages(channelId: string) {
     const messages = result.messages;
     fs.writeFileSync("messages.json", JSON.stringify(messages, null, 2));
   } catch (error) {
-    if (error.data) {
-      console.error(`Error fetching conversations: ${error.data}`);
-    } else {
-      console.error(`Error fetching conversations: ${error}`);
-    }
+    console.log(error);
   }
 }
 
@@ -47,11 +39,7 @@ async function joinChannel(channelId: string) {
     await client.conversations.join({ channel: channelId });
     console.log(`Successfully joined channel: ${channelId}`);
   } catch (error) {
-    if (error.data) {
-      console.error(`Error joining channel: ${error.data}`);
-    } else {
-      console.error(`Error joining channel: ${error}`);
-    }
+    console.log(error);
   }
 }
 

@@ -1,6 +1,13 @@
 {
+  "scripts": {
+    "start": "ts-node index.ts"
+  },
   "dependencies": {
     "@slack/web-api": "^7.0.4",
-    "dotenv": "^16.4.5"
+    "dotenv": "^16.4.5",
+    "typescript": "^5.4.5"
+  },
+  "devDependencies": {
+    "ts-node": "^10.9.2"
   }
 }
