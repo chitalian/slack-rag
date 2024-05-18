@@ -1,10 +1,14 @@
 {
   "scripts": {
-    "start": "ts-node index.ts"
+    "start": "ts-node rag.ts",
+    "slack": "ts-node index.ts"
   },
   "dependencies": {
     "@slack/web-api": "^7.0.4",
+    "chromadb": "^1.8.1",
+    "chromadb-default-embed": "^2.13.2",
     "dotenv": "^16.4.5",
+    "openai": "^4.47.1",
     "typescript": "^5.4.5"
   },
   "devDependencies": {
